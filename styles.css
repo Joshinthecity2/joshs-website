@@ -71,9 +71,9 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  width: min(100%, 1720px);
-  margin: 0 auto;
-  padding: 14px clamp(20px, 4vw, 72px);
+  width: 100%;
+  margin: 0;
+  padding: 12px clamp(22px, 5vw, 100px);
   border-bottom: 1px solid var(--line);
   background: rgba(7, 7, 7, 0.88);
   backdrop-filter: blur(16px);
@@ -116,16 +116,16 @@ main {
 .links,
 .contact {
   position: relative;
-  width: min(100%, 1720px);
+  width: min(100%, 1640px);
   margin: 0 auto;
-  padding: clamp(56px, 7vw, 104px) clamp(20px, 4vw, 72px);
+  padding: clamp(54px, 6vw, 92px) clamp(22px, 5vw, 100px);
   border-bottom: 1px solid var(--line);
 }
 
 .section-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 640px);
-  gap: clamp(28px, 4vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 560px);
+  gap: clamp(30px, 5vw, 88px);
 }
 
 .hero {
@@ -166,9 +166,9 @@ h2 {
 h1 {
   position: relative;
   margin-bottom: 22px;
-  font-size: clamp(3rem, 6.9vw, 8.1rem);
+  max-width: 13ch;
+  font-size: clamp(3.8rem, 4.55vw, 6rem);
   text-shadow: 3px 0 var(--hot), -2px 0 rgba(53, 242, 255, 0.45);
-  overflow-wrap: normal;
 }
 
 h1::after {
@@ -181,6 +181,11 @@ h1::after {
   content: attr(data-glitch);
   clip-path: inset(63% 0 18% 0);
   transform: translateX(-3px);
+}
+
+.title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 h2 {
@@ -561,6 +566,7 @@ time {
   }
 
   h1 {
+    max-width: 100%;
     font-size: clamp(3rem, 12vw, 6.8rem);
   }
 
@@ -622,9 +628,14 @@ time {
   }
 
   h1 {
+    max-width: 100%;
     font-size: clamp(2.55rem, 15vw, 5.6rem);
     line-height: 0.98;
     text-shadow: 2px 0 var(--hot), -1px 0 rgba(53, 242, 255, 0.45);
+  }
+
+  .title-line {
+    white-space: normal;
   }
 
   h1::after {

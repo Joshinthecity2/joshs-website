@@ -110,6 +110,7 @@ main {
 }
 
 .hero,
+.live-embed,
 .about,
 .music,
 .projects,
@@ -138,6 +139,28 @@ main {
 
 .hero-copy {
   min-width: 0;
+}
+
+.live-embed h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  line-height: 1.05;
+}
+
+.embed-frame-wrap {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 8, 0.9);
+  box-shadow: 10px 10px 0 var(--shadow);
+  overflow: hidden;
+}
+
+.embed-frame-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 66vh;
+  border: 0;
+  background: #000;
 }
 
 .eyebrow {
@@ -614,6 +637,7 @@ time {
   }
 
   .hero,
+  .live-embed,
   .about,
   .music,
   .projects,
@@ -663,6 +687,14 @@ time {
   .terminal {
     min-height: 0;
     box-shadow: 6px 6px 0 var(--shadow);
+  }
+
+  .embed-frame-wrap {
+    box-shadow: 6px 6px 0 var(--shadow);
+  }
+
+  .embed-frame-wrap iframe {
+    min-height: 72vh;
   }
 
   pre {
